@@ -13,7 +13,3 @@ $RECYCLE.BIN/
 *.njsproj
 *.sln
 *.sw?
-
-assets/music/*.mp3
-
-assets/images/gallery/*.jpg
