@@ -34,8 +34,21 @@ export class MusicController {
       this.audioEl.muted = false;
 
       this.audioEl.addEventListener('error', (e) => {
-        console.warn('Audio file error. Enabling synth fallback:', e);
-        this.usingSynthFallback = true;
+        const err = this.audioEl.error;
+        console.warn('Audio file error detected:', err ? `Code ${err.code} - ${err.message}` : e);
+      });
+
+      // Ensure seamless continuous looping across all browsers
+      this.audioEl.addEventListener('ended', () => {
+        this.audioEl.currentTime = 0;
+        this.audioEl.play().catch(e => console.log('Seamless loop restart note:', e));
+      });
+
+      // Background playback resilience: resume when returning to tab
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && this.isPlaying && this.audioEl && this.audioEl.paused && !this.usingSynthFallback) {
+          this.audioEl.play().catch(() => {});
+        }
       });
 
       this.audioEl.addEventListener('play', () => {
@@ -46,8 +59,11 @@ export class MusicController {
       });
 
       this.audioEl.addEventListener('pause', () => {
-        this.isPlaying = false;
-        this.updateUI(false);
+        // Only mark paused if not caused by tab switching or synth
+        if (!this.usingSynthFallback && this.audioEl.paused) {
+          this.isPlaying = false;
+          this.updateUI(false);
+        }
       });
     }
 
@@ -140,16 +156,23 @@ export class MusicController {
       this.dismissAutoplayToast();
     } catch (err) {
       if (err.name === 'NotAllowedError') {
-        // Browser blocked autoplay before user clicked
+        // Browser blocked autoplay before user interaction
         this.isPlaying = false;
         this.updateUI(false);
         throw err;
       }
-      console.warn('Audio play failed, falling back to ambient chime synth:', err);
-      this.usingSynthFallback = true;
-      this.startSynth();
-      this.isPlaying = true;
-      this.updateUI(true);
+      if (err.name === 'AbortError') {
+        // Play was interrupted by rapid interaction; keep state ready
+        return;
+      }
+      console.warn('Audio playback error:', err);
+      // Only switch to synth if audio source really failed
+      if (this.audioEl.error) {
+        this.usingSynthFallback = true;
+        this.startSynth();
+        this.isPlaying = true;
+        this.updateUI(true);
+      }
     }
   }
 
