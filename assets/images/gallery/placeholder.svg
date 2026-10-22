@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <rect width="600" height="600" fill="#1b1d36"/>
+  <circle cx="300" cy="270" r="100" fill="#2d3154"/>
+  <!-- Heart Icon -->
+  <path d="M 300 240 C 300 220 270 200 250 225 C 220 260 300 305 300 320 C 300 305 380 260 350 225 C 330 200 300 220 300 240 Z" fill="#ff4d6d"/>
+  <text x="300" y="420" font-family="'Outfit', sans-serif" font-size="22" fill="#e2e8f0" font-weight="600" text-anchor="middle">Add Your Special Photo Here</text>
+  <text x="300" y="455" font-family="'Outfit', sans-serif" font-size="15" fill="#94a3b8" text-anchor="middle">Drop your photo into assets/images/gallery/</text>
+</svg>

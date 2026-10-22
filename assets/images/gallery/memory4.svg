@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cafeGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b1b17"/>
+      <stop offset="50%" stop-color="#4a2c2a"/>
+      <stop offset="100%" stop-color="#703d38"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#cafeGrad4)"/>
+
+  <!-- Warm Wooden Table -->
+  <ellipse cx="300" cy="460" rx="270" ry="120" fill="#38221f" stroke="#54332e" stroke-width="6"/>
+
+  <!-- Fairy lights hanging string -->
+  <path d="M 0 60 Q 150 110 300 70 Q 450 110 600 60" fill="none" stroke="#ffd166" stroke-width="2" opacity="0.4"/>
+  <circle cx="90" cy="85" r="7" fill="#ffd166"/>
+  <circle cx="210" cy="88" r="7" fill="#ffd166"/>
+  <circle cx="340" cy="74" r="7" fill="#ffd166"/>
+  <circle cx="470" cy="88" r="7" fill="#ffd166"/>
+
+  <!-- Two Coffee Cups forming a heart in steam -->
+  <!-- Cup Left -->
+  <ellipse cx="230" cy="420" rx="55" ry="32" fill="#faf0ca"/>
+  <ellipse cx="230" cy="416" rx="46" ry="24" fill="#6f4e37"/>
+  <!-- Latte art heart -->
+  <path d="M 230 410 C 230 405 220 400 215 406 C 208 414 230 424 230 428 C 230 424 252 414 245 406 C 240 400 230 405 230 410 Z" fill="#fff" opacity="0.9"/>
+  <!-- Cup handle -->
+  <path d="M 175 410 Q 155 420 178 435" fill="none" stroke="#faf0ca" stroke-width="8"/>
+
+  <!-- Cup Right -->
+  <ellipse cx="370" cy="420" rx="55" ry="32" fill="#ffcad4"/>
+  <ellipse cx="370" cy="416" rx="46" ry="24" fill="#6f4e37"/>
+  <path d="M 370 410 C 370 405 360 400 355 406 C 348 414 370 424 370 428 C 370 424 392 414 385 406 C 380 400 370 405 370 410 Z" fill="#fff" opacity="0.9"/>
+  <path d="M 425 410 Q 445 420 422 435" fill="none" stroke="#ffcad4" stroke-width="8"/>
+
+  <!-- Rising steam intertwining into a romantic heart -->
+  <path d="M 230 380 Q 220 320 270 260 Q 300 220 300 180" fill="none" stroke="#fff" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 370 380 Q 380 320 330 260 Q 300 220 300 180" fill="none" stroke="#fff" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- Glowing Heart formed by steam -->
+  <path d="M 300 175 C 300 155 270 140 255 160 C 235 188 300 225 300 240 C 300 225 365 188 345 160 C 330 140 300 155 300 175 Z" fill="#ff758f" opacity="0.85"/>
+  <circle cx="300" cy="190" r="45" fill="#ff758f" opacity="0.2"/>
+
+  <!-- Rose Petals scattered on table -->
+  <ellipse cx="140" cy="460" rx="14" ry="9" fill="#ff0054" transform="rotate(-25 140 460)"/>
+  <ellipse cx="170" cy="485" rx="12" ry="7" fill="#ff0054" transform="rotate(15 170 485)"/>
+  <ellipse cx="440" cy="460" rx="15" ry="8" fill="#ff0054" transform="rotate(35 440 460)"/>
+  <ellipse cx="465" cy="485" rx="11" ry="6" fill="#ff0054" transform="rotate(-15 465 485)"/>
+
+  <text x="300" y="560" font-family="'Outfit', sans-serif" font-size="20" fill="#f8edeb" font-weight="600" text-anchor="middle" letter-spacing="3">COFFEE DATES &amp; SWEET TALK</text>
+</svg>

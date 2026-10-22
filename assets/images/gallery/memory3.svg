@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#02030a"/>
+      <stop offset="60%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#1b263b"/>
+    </linearGradient>
+    <radialGradient id="fireGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb703" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#fb8500" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#d90429" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#skyGrad3)"/>
+
+  <!-- Starry Sky -->
+  <g fill="#fff">
+    <circle cx="50" cy="50" r="1.5" opacity="0.9"/>
+    <circle cx="120" cy="120" r="2" opacity="0.8"/>
+    <circle cx="220" cy="70" r="1.2" opacity="0.7"/>
+    <circle cx="340" cy="40" r="1.8" opacity="0.9"/>
+    <circle cx="480" cy="90" r="1.5" opacity="0.8"/>
+    <circle cx="550" cy="160" r="2" opacity="0.9"/>
+    <circle cx="80" cy="220" r="1.5" opacity="0.7"/>
+    <circle cx="280" cy="190" r="2.2" opacity="0.95"/>
+    <circle cx="430" cy="210" r="1.2" opacity="0.8"/>
+    <circle cx="510" cy="280" r="1.5" opacity="0.8"/>
+  </g>
+
+  <!-- Shooting Star -->
+  <line x1="380" y1="60" x2="480" y2="120" stroke="#ffd166" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="480" cy="120" r="3" fill="#fff"/>
+
+  <!-- Big Pine Tree Silhouette Left -->
+  <polygon points="120,240 70,350 170,350" fill="#080e14"/>
+  <polygon points="120,310 50,430 190,430" fill="#080e14"/>
+  <polygon points="120,390 30,520 210,520" fill="#080e14"/>
+  <rect x="110" y="520" width="20" height="40" fill="#080e14"/>
+
+  <!-- Pine Tree Right -->
+  <polygon points="500,270 460,370 540,370" fill="#080e14"/>
+  <polygon points="500,340 440,450 560,450" fill="#080e14"/>
+  <polygon points="500,420 420,530 580,530" fill="#080e14"/>
+  <rect x="490" y="530" width="20" height="30" fill="#080e14"/>
+
+  <!-- Ground -->
+  <ellipse cx="300" cy="570" rx="350" ry="70" fill="#06090e"/>
+
+  <!-- Campfire Glow -->
+  <circle cx="300" cy="490" r="110" fill="url(#fireGlow)"/>
+
+  <!-- Campfire wood and flames -->
+  <line x1="280" y1="510" x2="320" y2="495" stroke="#3d1308" stroke-width="6" stroke-linecap="round"/>
+  <line x1="280" y1="495" x2="320" y2="510" stroke="#3d1308" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 300 465 Q 315 485 300 505 Q 285 485 300 465 Z" fill="#ffb703"/>
+  <path d="M 300 475 Q 310 490 300 505 Q 290 490 300 475 Z" fill="#fff"/>
+
+  <!-- Couple sitting close on blanket -->
+  <!-- Blanket -->
+  <ellipse cx="300" cy="525" rx="90" ry="18" fill="#541388"/>
+  <!-- Couple sitting -->
+  <g fill="#0b0f19">
+    <!-- Person 1 -->
+    <circle cx="255" cy="465" r="15"/>
+    <path d="M 240 480 Q 255 475 270 485 L 270 520 L 235 520 Z"/>
+    <!-- Person 2 leaning head on shoulder -->
+    <circle cx="280" cy="470" r="14"/>
+    <path d="M 270 485 Q 285 480 298 488 L 295 520 L 265 520 Z"/>
+  </g>
+
+  <!-- Glowing Heart floating into the night sky -->
+  <path d="M 300 375 C 300 365 285 358 278 368 C 268 382 300 400 300 408 C 300 400 332 382 322 368 C 315 358 300 365 300 375 Z" fill="#ff4d6d"/>
+  <circle cx="300" cy="385" r="22" fill="#ff4d6d" opacity="0.3"/>
+
+  <text x="300" y="580" font-family="'Outfit', sans-serif" font-size="20" fill="#e0e1dd" font-weight="600" text-anchor="middle" letter-spacing="3">STARRY NIGHTS TOGETHER</text>
+</svg>

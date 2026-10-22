@@ -1,0 +1,313 @@
+# HBD LOVER WEBSITE — COMPLETE DEVELOPMENT PROMPT
+
+## 1. Project Overview
+
+Develop a beautiful, cinematic, romantic birthday surprise website for my girlfriend/boyfriend. The website must feel like a real midnight birthday celebration, featuring realistic sky-shot fireworks, glowing hearts, a live countdown, romantic music, personal photos, and an interactive love letter.
+
+The experience must automatically transition from the countdown to the birthday celebration at exactly 12:00 AM on the configured birthday date.
+
+**Project type:** Static frontend website  
+**Technology stack:** HTML5, CSS3, Vanilla JavaScript  
+**Graphics:** HTML Canvas 2D API  
+**Deployment:** GitHub Pages, Netlify, or Vercel  
+**Backend:** Not required  
+**Frameworks:** Not allowed
+
+## 2. Strict Technology Requirements
+
+Use only:
+- HTML5 for semantic page structure.
+- CSS3 for styling, responsive layouts, transitions, and visual effects.
+- Vanilla JavaScript for all interactive features.
+- Canvas 2D for real-time fireworks particle simulation.
+- Local image, audio, and font assets where appropriate.
+
+Do not use React, Vue, Angular, TypeScript, Tailwind CSS, Bootstrap, jQuery, or a backend server.
+
+The website must run as a static website without installing dependencies.
+
+## 3. Website Design
+
+Create a premium, romantic, cinematic interface with:
+- Deep midnight-blue and black sky.
+- Pink, red, purple, and golden accent colors.
+- Glowing typography and elegant romantic fonts.
+- Full-screen animated background.
+- Floating hearts, stars, and rose petals.
+- Soft gradients and glass-like interface elements.
+- Smooth transitions between every stage.
+- Responsive layouts for phones, tablets, and desktops.
+
+The overall design should feel emotional, magical, realistic, and visually impressive.
+
+## 4. Page 1 — Midnight Countdown
+
+Create a full-screen landing page with:
+- Romantic background and animated stars.
+- Heading: "Someone Special Is Waiting for a Surprise ❤️"
+- Live countdown showing days, hours, minutes, and seconds.
+- Message: "A magical moment is almost here..."
+- Animated heart in the center.
+- Subtle floating particles.
+- Target birthday date and timezone configured in JavaScript.
+
+Requirements:
+- Update the countdown every second.
+- Automatically transition to the birthday experience when the target time is reached.
+- Do not require a page refresh.
+- If a visitor opens the website after the target time, show the birthday celebration immediately.
+- Handle browser tab suspension and system clock changes gracefully.
+
+## 5. Page 2 — Realistic Sky-Shot Fireworks
+
+Create a full-screen Canvas-based fireworks engine.
+
+### Rocket launch simulation
+- Launch rockets upward from different horizontal positions.
+- Animate rocket acceleration and velocity.
+- Draw glowing trails behind moving rockets.
+- Add launch sparks and small smoke-like particles.
+- Vary launch heights, speed, colors, and timing.
+
+### Firework explosions
+- Create multiple burst patterns:
+  - Circular fireworks.
+  - Chrysanthemum-style bursts.
+  - Willow-style golden trails.
+  - Ring-shaped fireworks.
+  - Heart-shaped fireworks.
+  - Random colorful particle explosions.
+
+### Particle physics
+Each particle should support:
+- Position and velocity.
+- Gravity and optional air resistance.
+- Friction and velocity damping.
+- Lifetime and alpha fading.
+- Color variation and glow.
+- Trail rendering.
+- Natural particle dispersion.
+
+Use JavaScript's requestAnimationFrame for smooth animation. Clear the Canvas using translucent frames where appropriate to create realistic light trails.
+
+### Atmosphere
+- Add layered smoke-like particles after large explosions.
+- Create shimmering stars in the background.
+- Add occasional shooting stars.
+- Display floating heart particles after special explosions.
+- Simulate realistic launch and explosion timing.
+- Add overlapping fireworks to create a grand midnight celebration.
+
+The animation must be generated in real time. Do not use a static fireworks image or prerecorded fireworks video as a substitute.
+
+## 6. Page 3 — Birthday Reveal
+
+After the initial fireworks begin, reveal the birthday message with an elegant animation.
+
+Main heading:
+"Happy Birthday, My Love ❤️"
+
+Supporting text:
+"Today is all about you. You make my world brighter, and every moment with you is special."
+
+Include:
+- Animated text reveal.
+- Glowing heart effects.
+- Golden confetti.
+- Continuous background fireworks.
+- A prominent "Open Your Surprise" button.
+
+The name and message must be configurable.
+
+## 7. Page 4 — Birthday Cake Surprise
+
+Create a visually attractive birthday cake using CSS or HTML.
+
+Include:
+- Multiple cake layers.
+- Animated candles and flames.
+- Glowing decorations.
+- A "Make a Wish" button.
+- An interactive "Blow the Candles" action.
+
+When the visitor activates the candle interaction:
+- Extinguish the candle flames.
+- Trigger a small burst of confetti.
+- Display "Make a wish, my love! ✨"
+- Launch a special heart-shaped firework.
+
+Do not claim to detect real breath unless microphone input is deliberately implemented with permission.
+
+## 8. Page 5 — Romantic Love Letter
+
+Create an animated envelope with a heart seal.
+
+When the user clicks "Open My Letter":
+- Animate the envelope opening.
+- Reveal a romantic letter.
+- Show the message with a smooth typing or fade-in effect.
+- Add floating hearts and soft background sparkles.
+
+Use this editable default message:
+
+"My Love,
+
+Happy Birthday to the most special person in my life. You bring happiness, warmth, and beautiful memories into my world. I hope your special day is filled with love, laughter, and endless reasons to smile.
+
+No matter how many birthdays come and go, I hope we continue creating beautiful memories together.
+
+You are truly special to me. ❤️
+
+Forever with love."
+
+Allow the message to be customized in one configuration file.
+
+## 9. Page 6 — Our Memories Gallery
+
+Create a responsive gallery using local images.
+
+Features:
+- Romantic photo cards.
+- Polaroid-style layouts.
+- Hover and tap animations.
+- Click-to-enlarge image viewer.
+- Next and previous photo controls.
+- Optional captions and dates.
+- Smooth transitions between photos.
+
+Use placeholder image paths and document where the user should add their own photos. Do not invent personal photos or assume they exist.
+
+## 10. Background Music
+
+Add background music using the HTML audio element.
+
+Requirements:
+- Play and pause controls.
+- Volume control.
+- Music status indicator.
+- Optional looping.
+- Responsive audio controls.
+- Start playback after a visitor interaction because browser autoplay policies may block automatic playback.
+
+Use a configurable local audio file in assets/music/.
+
+If the audio file is unavailable, the website must continue working without errors.
+
+## 11. Midnight Unlock Logic
+
+Create a centralized configuration object in JavaScript:
+
+- Recipient name.
+- Sender name.
+- Birthday date.
+- Target hour and minute.
+- Timezone.
+- Birthday message.
+- Love letter content.
+- Gallery image paths.
+- Music file path.
+
+Use Asia/Kolkata as the default timezone.
+
+Important:
+- The target must represent midnight at the start of the configured birthday date.
+- Use timezone-aware date calculations.
+- Do not parse ambiguous date strings directly.
+- Recalculate remaining time at regular intervals.
+- Recheck the current time when the browser tab becomes visible.
+- If the target time has already passed, display the celebration immediately.
+- Do not restart the countdown on every page refresh.
+- Explain that client-side countdowns are visual effects, not secure access controls.
+
+## 12. Project Folder Structure
+
+Create the following structure:
+
+hbd-lover-website/
+├── index.html
+├── README.md
+├── css/
+│   └── style.css
+├── js/
+│   ├── config.js
+│   ├── main.js
+│   ├── countdown.js
+│   ├── fireworks.js
+│   ├── cake.js
+│   ├── letter.js
+│   ├── gallery.js
+│   └── music.js
+└── assets/
+    ├── images/
+    │   └── gallery/
+    ├── music/
+    └── fonts/
+
+Keep the code modular and use native JavaScript modules.
+
+## 13. Performance and Accessibility
+
+- Optimize Canvas rendering for mobile and desktop.
+- Account for device pixel ratio and window resizing.
+- Limit particle counts on lower-powered devices.
+- Avoid creating excessive DOM elements for particles.
+- Cancel animation frames when the animation is stopped.
+- Pause or reduce effects when the page is hidden.
+- Respect the prefers-reduced-motion setting.
+- Provide readable contrast and accessible button labels.
+- Ensure keyboard navigation works.
+- Prevent horizontal scrolling.
+- Handle missing assets gracefully.
+
+## 14. Testing Requirements
+
+Test all of the following:
+
+1. Countdown displays the correct remaining time.
+2. Countdown switches to celebration at the target time.
+3. Refreshing the page does not break the countdown.
+4. Opening after midnight displays the celebration immediately.
+5. Fireworks launch and explode continuously.
+6. Heart-shaped fireworks display correctly.
+7. Cake candle interactions work.
+8. Love letter opens and closes correctly.
+9. Gallery images and lightbox controls work.
+10. Music controls work after user interaction.
+11. The layout works on mobile and desktop.
+12. Missing image or audio files do not crash the website.
+13. Reduced-motion preferences are respected.
+14. No uncaught JavaScript errors occur.
+
+Use a configurable test mode to simulate the midnight transition without waiting until midnight. Disable test mode in production.
+
+## 15. Deployment
+
+Prepare the website for static hosting.
+
+Provide:
+- Local development instructions.
+- GitHub repository setup instructions.
+- GitHub Pages deployment instructions.
+- Netlify deployment instructions.
+- Vercel deployment instructions.
+- Asset path and relative URL guidance.
+- A README explaining how to personalize the website.
+
+Do not require a paid service or API key.
+
+## 16. Final Deliverables
+
+Generate complete working code for every file.
+
+Do not provide pseudocode, incomplete functions, or placeholder implementations for the core countdown and fireworks engine.
+
+Include:
+- Finished responsive website.
+- Real-time Canvas fireworks.
+- Midnight countdown and automatic reveal.
+- Romantic interactive features.
+- Editable personalization settings.
+- Sample asset instructions.
+- Setup, testing, and deployment documentation.
+
+Start by creating the complete project structure, then implement every file, verify the interactions, and fix any errors before considering the project complete.

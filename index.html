@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love ❤️ | A Midnight Surprise</title>
+  <meta name="description" content="A romantic midnight birthday celebration website featuring realistic sky-shot fireworks, live countdown, interactive birthday cake, 3D love letter, and photo memories.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Fullscreen Interactive Fireworks & Stars Canvas -->
+  <canvas id="fireworks-canvas" aria-label="Interactive fireworks and starry night sky"></canvas>
+
+  <!-- Celebratory Confetti Particle Container -->
+  <div id="confetti-container" aria-hidden="true"></div>
+
+  <!-- Audio Element for Background Music -->
+  <audio id="bg-audio" autoplay loop preload="auto" src="assets/music/kalla-nikkiriye.mp3"></audio>
+
+  <!-- ===================================================================
+       ROMANTIC WELCOME ENTRANCE (Auto-Plays Music on Open)
+       =================================================================== -->
+  <div id="welcome-gate" class="welcome-gate" role="dialog" aria-modal="true" aria-label="Welcome Entrance">
+    <div class="welcome-gate-card">
+      <div class="gate-gift-icon">🎁</div>
+      <div class="romantic-badge">
+        <span>✨</span>
+        <span>A Special Birthday Surprise</span>
+        <span>✨</span>
+      </div>
+      <h1 class="gate-title">Ready for Your Surprise? ❤️</h1>
+      <p class="gate-subtitle">Turn up your volume 🔊 and step into our midnight world</p>
+      <button id="gate-enter-btn" class="glow-btn gate-cta-btn">
+        <span>✨ Tap to Open &amp; Play Song 🎶</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Website Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- ===================================================================
+         STAGE 1: MIDNIGHT COUNTDOWN LANDING PAGE
+         =================================================================== -->
+    <main id="countdown-section" aria-live="polite">
+      <div class="countdown-card">
+        <div class="romantic-badge">
+          <span>✨</span>
+          <span>A Magical Midnight Moment</span>
+          <span>✨</span>
+        </div>
+
+        <h1 class="countdown-title">Someone Special Is Waiting for a Surprise ❤️</h1>
+        <p class="countdown-subtitle">Counting down every heartbeat until your special day begins...</p>
+
+        <!-- Pulsing Heart Pulsar -->
+        <div class="central-heart-pulsar" title="My heart beats for you" role="img" aria-label="Pulsing heart">
+          💖
+        </div>
+
+        <!-- Live Countdown Timer Grid -->
+        <div class="countdown-timer-grid">
+          <div class="timer-box">
+            <span class="timer-digits" id="count-days">00</span>
+            <span class="timer-label">Days</span>
+          </div>
+          <div class="timer-box">
+            <span class="timer-digits" id="count-hours">00</span>
+            <span class="timer-label">Hours</span>
+          </div>
+          <div class="timer-box">
+            <span class="timer-digits" id="count-minutes">00</span>
+            <span class="timer-label">Minutes</span>
+          </div>
+          <div class="timer-box">
+            <span class="timer-digits" id="count-seconds">00</span>
+            <span class="timer-label">Seconds</span>
+          </div>
+        </div>
+
+        <!-- Target Date & Timezone Indicator -->
+        <div class="target-info">
+          Midnight Celebration unlocks at <span id="target-date-label">Loading...</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===================================================================
+         STAGE 2: BIRTHDAY CELEBRATION EXPERIENCE (AUTO-UNLOCKED AT MIDNIGHT)
+         =================================================================== -->
+    <section id="celebration-section" class="hidden" aria-live="polite">
+      
+      <!-- Top Navigation Header -->
+      <header class="celebration-nav-bar">
+        <div class="brand-logo">Happy Birthday, <span class="recipient-name">My Love</span> ✨</div>
+        <nav>
+          <ul class="nav-chapters">
+            <li><button class="nav-chapter-pill active" data-nav-chapter="reveal">🎉 Celebration</button></li>
+            <li><button class="nav-chapter-pill" data-nav-chapter="cake">🎂 Birthday Cake</button></li>
+            <li><button class="nav-chapter-pill" data-nav-chapter="letter">💌 Love Letter</button></li>
+            <li><button class="nav-chapter-pill" data-nav-chapter="gallery">📸 Our Memories</button></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="celebration-stage">
+
+        <!-- -------------------------------------------------------------
+             CHAPTER 1: REVEAL HERO
+             ------------------------------------------------------------- -->
+        <article id="chapter-reveal" class="chapter-content">
+          <div class="reveal-hero-card">
+            <div class="reveal-crown">👑</div>
+            <h1 class="reveal-title" id="reveal-main-heading">Happy Birthday, My Love ❤️</h1>
+            <p class="reveal-subtext" id="reveal-sub-heading">
+              Today is all about you. You make my world infinitely brighter, and every single second with you is a treasure.
+            </p>
+            <button class="glow-btn" id="reveal-open-surprise-btn">
+              <span>Open Your Birthday Surprise 🎂</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- -------------------------------------------------------------
+             CHAPTER 2: INTERACTIVE BIRTHDAY CAKE
+             ------------------------------------------------------------- -->
+        <article id="chapter-cake" class="chapter-content hidden">
+          <div class="cake-card">
+            <div class="cake-header">
+              <h2 id="cake-wish-message">Make a Birthday Wish 🎂</h2>
+              <p id="cake-wish-subtitle">Close your eyes, make a sweet wish, and blow out the candles!</p>
+            </div>
+
+            <!-- Visual Tiered Birthday Cake -->
+            <div class="cake-stage" id="cake-interactive-box" title="Click to blow candles">
+              <div class="cake-box">
+                <!-- 3 Flickering Candle Flames -->
+                <div class="candles-row">
+                  <div class="candle-item">
+                    <div class="candle-flame"></div>
+                    <div class="candle-wick"></div>
+                    <div class="candle-stick"></div>
+                  </div>
+                  <div class="candle-item">
+                    <div class="candle-flame"></div>
+                    <div class="candle-wick"></div>
+                    <div class="candle-stick"></div>
+                  </div>
+                  <div class="candle-item">
+                    <div class="candle-flame"></div>
+                    <div class="candle-wick"></div>
+                    <div class="candle-stick"></div>
+                  </div>
+                </div>
+
+                <!-- Top Tier -->
+                <div class="cake-tier-top">
+                  <div class="cake-frosting-top"></div>
+                </div>
+
+                <!-- Bottom Tier -->
+                <div class="cake-tier-bottom">
+                  <div class="cake-frosting-bottom"></div>
+                </div>
+
+                <!-- Platter -->
+                <div class="cake-plate"></div>
+              </div>
+            </div>
+
+            <div class="cake-actions">
+              <button class="glow-btn gold-btn" id="blow-candles-btn">
+                <span>Blow the Candles 🕯️</span>
+              </button>
+              <button class="glow-btn hidden" id="cake-to-letter-btn">
+                <span>Read My Love Letter 💌</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- -------------------------------------------------------------
+             CHAPTER 3: ROMANTIC 3D LOVE LETTER
+             ------------------------------------------------------------- -->
+        <article id="chapter-letter" class="chapter-content hidden">
+          <div class="letter-card-container">
+            <h2 class="countdown-title">A Letter Written From The Heart 💌</h2>
+            <p class="countdown-subtitle">Click the heart seal to open your birthday letter</p>
+
+            <!-- 3D Envelope -->
+            <div class="envelope-wrapper" id="envelope-wrapper">
+              <div class="envelope-back"></div>
+              <div class="envelope-paper">
+                <span>For <span class="recipient-name">My Love</span> ❤️</span>
+              </div>
+              <div class="envelope-front-pocket"></div>
+              <div class="envelope-flap"></div>
+              <div class="wax-seal" id="wax-seal" title="Click to break seal and read">
+                <span>❤️</span>
+              </div>
+            </div>
+
+            <button class="glow-btn" id="open-letter-btn">
+              <span>Open My Letter 💌</span>
+            </button>
+
+            <!-- Unfolded Letter Parchment Modal -->
+            <div class="unfolded-letter-modal" id="unfolded-letter-paper">
+              <div class="letter-salutation" id="letter-salutation">My Dearest Love,</div>
+              <div id="letter-text-content">
+                <!-- Staggered paragraph animation will appear here -->
+              </div>
+              <div class="letter-closing" id="letter-closing">Forever &amp; Always With Love,</div>
+              <div class="letter-signature" id="letter-signature">Yours Forever ❤️</div>
+            </div>
+
+            <div style="margin-top: 2.5rem;">
+              <button class="glow-btn gold-btn hidden" id="letter-to-gallery-btn">
+                <span>Visit Our Memories 📸</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- -------------------------------------------------------------
+             CHAPTER 4: OUR MEMORIES GALLERY
+             ------------------------------------------------------------- -->
+        <article id="chapter-gallery" class="chapter-content hidden">
+          <div class="gallery-card-container">
+            <h2 class="countdown-title">Our Sweetest Memories 📸</h2>
+            <p class="countdown-subtitle">Every snapshot with you is a memory I keep close to my heart.</p>
+
+            <!-- Polaroid Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+              <!-- Rendered dynamically from config.gallery -->
+            </div>
+
+            <!-- Final Love Card -->
+            <div class="final-love-card">
+              <h3>To Infinity &amp; Beyond ❤️</h3>
+              <p>
+                Thank you for being the most incredible part of my life. May this year bring you all the love, health, and happiness in the world!
+              </p>
+              <button class="glow-btn" id="replay-fireworks-btn">
+                <span>Celebrate With More Fireworks 🎆</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===================================================================
+       PHOTO LIGHTBOX MODAL
+       =================================================================== -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close photo viewer">&times;</button>
+      <button class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Previous photo">&#10094;</button>
+      <button class="lightbox-nav-btn next" id="lightbox-next" aria-label="Next photo">&#10095;</button>
+      
+      <div class="lightbox-image-wrapper">
+        <img id="lightbox-image" src="" alt="Enlarged memory">
+      </div>
+      <div class="lightbox-info">
+        <h3 id="lightbox-caption">Photo Title</h3>
+        <div class="date-tag" id="lightbox-date">Date</div>
+        <p id="lightbox-description">Description</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       FLOATING ROMANTIC MUSIC PLAYER
+       =================================================================== -->
+  <aside class="music-player-pill" aria-label="Background music player">
+    <button class="music-toggle-btn" id="music-toggle-btn" aria-label="Toggle background music" aria-pressed="false">
+      <span class="music-icon">🔈</span>
+    </button>
+    <div class="music-info">
+      <span class="music-title-tag" id="music-status-text">Kalla Nikkiriye (Anbil Avan) 🎵</span>
+      <div class="music-equalizer" id="music-equalizer" aria-hidden="true">
+        <div class="eq-bar"></div>
+        <div class="eq-bar"></div>
+        <div class="eq-bar"></div>
+        <div class="eq-bar"></div>
+      </div>
+    </div>
+    <input type="range" class="music-volume-input" id="music-volume-slider" min="0" max="100" value="70" aria-label="Volume slider" title="Volume">
+  </aside>
+
+  <!-- ===================================================================
+       TEST & PREVIEW TOOLBAR (Allows instant testing without waiting)
+       =================================================================== -->
+  <div class="test-mode-bar" id="test-mode-bar">
+    <span class="test-tag">TEST TOOLS:</span>
+    <button class="test-action-btn" id="test-toggle-scene">🎉 Instant Midnight Reveal</button>
+    <button class="test-action-btn" id="test-heart-fw">💖 Heart Firework</button>
+    <button class="test-action-btn" id="test-blow-cake">🎂 Blow Candles</button>
+  </div>
+
+  <!-- Module Script Bootstrap -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

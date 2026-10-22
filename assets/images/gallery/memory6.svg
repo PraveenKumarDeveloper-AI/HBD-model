@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="partyGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19052b"/>
+      <stop offset="50%" stop-color="#3c096c"/>
+      <stop offset="100%" stop-color="#240046"/>
+    </linearGradient>
+    <radialGradient id="cakeGlow6" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd166" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#partyGrad6)"/>
+
+  <!-- Confetti bits floating in air -->
+  <rect x="80" y="80" width="12" height="6" fill="#ff2a6d" transform="rotate(35 80 80)"/>
+  <rect x="480" y="90" width="10" height="7" fill="#ffd166" transform="rotate(-25 480 90)"/>
+  <rect x="160" y="150" width="8" height="12" fill="#05d9e8" transform="rotate(45 160 150)"/>
+  <rect x="420" y="170" width="11" height="8" fill="#e0aaff" transform="rotate(15 420 170)"/>
+  <circle cx="120" cy="240" r="5" fill="#ffd166"/>
+  <circle cx="490" cy="260" r="6" fill="#ff70a6"/>
+  
+  <!-- Big Birthday Cake Centerpiece -->
+  <!-- Cake Platter -->
+  <ellipse cx="300" cy="480" rx="170" ry="26" fill="#495057"/>
+  <ellipse cx="300" cy="475" rx="160" ry="22" fill="#f8f9fa"/>
+
+  <!-- Bottom Tier -->
+  <path d="M 180 390 L 180 460 Q 300 495 420 460 L 420 390 Z" fill="#ff758f"/>
+  <ellipse cx="300" cy="390" rx="120" ry="20" fill="#ffb3c1"/>
+
+  <!-- Top Tier -->
+  <path d="M 220 310 L 220 380 Q 300 410 380 380 L 380 310 Z" fill="#ff4d6d"/>
+  <ellipse cx="300" cy="310" rx="80" ry="16" fill="#ff8fa3"/>
+
+  <!-- Frosting Drips -->
+  <path d="M 220 315 Q 235 340 250 315 Q 270 345 290 315 Q 310 345 330 315 Q 350 340 380 315" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Candles -->
+  <!-- Candle Left -->
+  <rect x="260" y="250" width="8" height="45" fill="#ffd166" rx="4"/>
+  <!-- Candle Center -->
+  <rect x="296" y="240" width="8" height="55" fill="#05d9e8" rx="4"/>
+  <!-- Candle Right -->
+  <rect x="332" y="250" width="8" height="45" fill="#ffd166" rx="4"/>
+
+  <!-- Candle Flames (glowing) -->
+  <circle cx="264" cy="235" r="14" fill="url(#cakeGlow6)"/>
+  <path d="M 264 225 Q 272 236 264 246 Q 256 236 264 225 Z" fill="#fff"/>
+  <path d="M 264 228 Q 270 236 264 244 Q 258 236 264 228 Z" fill="#ffb703"/>
+
+  <circle cx="300" cy="225" r="18" fill="url(#cakeGlow6)"/>
+  <path d="M 300 212 Q 310 226 300 238 Q 290 226 300 212 Z" fill="#fff"/>
+  <path d="M 300 216 Q 308 226 300 236 Q 292 226 300 216 Z" fill="#ffb703"/>
+
+  <circle cx="336" cy="235" r="14" fill="url(#cakeGlow6)"/>
+  <path d="M 336 225 Q 344 236 336 246 Q 328 236 336 225 Z" fill="#fff"/>
+  <path d="M 336 228 Q 342 236 336 244 Q 330 236 336 228 Z" fill="#ffb703"/>
+
+  <!-- Sparklers & Heart Firework above cake -->
+  <path d="M 300 95 C 300 70 260 50 240 80 C 210 120 300 170 300 190 C 300 170 390 120 360 80 C 340 50 300 70 300 95 Z" fill="#ff2a6d"/>
+  <circle cx="300" cy="115" r="45" fill="#ff2a6d" opacity="0.3"/>
+
+  <text x="300" y="555" font-family="'Outfit', sans-serif" font-size="20" fill="#ffd166" font-weight="600" text-anchor="middle" letter-spacing="3">TO A LIFETIME OF BIRTHDAYS ❤️</text>
+</svg>

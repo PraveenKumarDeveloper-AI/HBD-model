@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f2a"/>
+      <stop offset="50%" stop-color="#241442"/>
+      <stop offset="100%" stop-color="#5a1846"/>
+    </linearGradient>
+    <linearGradient id="streetGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe6a7" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffe6a7" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="lampLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff275" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#ffb703" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ffb703" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="600" height="600" fill="url(#skyGrad1)"/>
+  
+  <!-- Twinkling Stars -->
+  <circle cx="120" cy="80" r="1.5" fill="#fff" opacity="0.8"/>
+  <circle cx="280" cy="60" r="2" fill="#fff" opacity="0.9"/>
+  <circle cx="450" cy="110" r="1.5" fill="#fff" opacity="0.7"/>
+  <circle cx="520" cy="70" r="2" fill="#ffd166" opacity="0.9"/>
+  <circle cx="90" cy="180" r="1.8" fill="#fff" opacity="0.6"/>
+  <circle cx="360" cy="140" r="1.2" fill="#fff" opacity="0.8"/>
+  <circle cx="210" cy="190" r="1.5" fill="#fff" opacity="0.8"/>
+  <circle cx="490" cy="220" r="1.5" fill="#ff70a6" opacity="0.8"/>
+
+  <!-- Big Crescent Moon -->
+  <path d="M 460 70 A 45 45 0 0 0 500 135 A 50 50 0 1 1 460 70 Z" fill="#fff3b0" opacity="0.95"/>
+  <circle cx="475" cy="100" r="60" fill="#fff3b0" opacity="0.12"/>
+
+  <!-- Lamp Post Light Cone -->
+  <polygon points="300,240 180,560 420,560" fill="url(#streetGlow)" opacity="0.45"/>
+  <circle cx="300" cy="235" r="55" fill="url(#lampLight)"/>
+
+  <!-- Lamp Post -->
+  <line x1="300" y1="230" x2="300" y2="560" stroke="#1d152b" stroke-width="8"/>
+  <path d="M 280 230 Q 300 190 320 230 Z" fill="#241738"/>
+  <circle cx="300" cy="230" r="10" fill="#fff" opacity="0.9"/>
+
+  <!-- Ground -->
+  <ellipse cx="300" cy="580" rx="360" ry="80" fill="#120c1f"/>
+
+  <!-- Silhouettes of Couple -->
+  <!-- Person Left -->
+  <circle cx="260" cy="410" r="16" fill="#120c1f"/>
+  <path d="M 245 430 Q 260 425 275 430 L 278 520 L 242 520 Z" fill="#120c1f"/>
+  <!-- Person Right -->
+  <circle cx="295" cy="416" r="15" fill="#120c1f"/>
+  <path d="M 280 435 Q 295 430 310 435 L 312 520 L 278 520 Z" fill="#120c1f"/>
+
+  <!-- Floating Glowing Heart above heads -->
+  <path d="M 300 345 C 300 330 280 320 270 335 C 255 355 300 380 300 390 C 300 380 345 355 330 335 C 320 320 300 330 300 345 Z" fill="#ff2a6d" opacity="0.95"/>
+  <circle cx="300" cy="355" r="30" fill="#ff2a6d" opacity="0.3"/>
+
+  <!-- Floating Sparkles -->
+  <text x="300" y="560" font-family="'Outfit', sans-serif" font-size="20" fill="#ffb4a2" font-weight="600" text-anchor="middle" letter-spacing="3">WHERE OUR STORY BEGAN</text>
+</svg>
